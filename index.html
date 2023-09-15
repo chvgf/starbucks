@@ -54,8 +54,11 @@
 
   <!-- gsap.js -->
   <!-- 순서 주의(main.js에서 사용하니까 더 앞에) -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
+  <!-- scrollmagic -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- youtube.js -->
   <script defer src="js/youtube.js"></script>
   <!-- main.js -->
@@ -534,43 +537,43 @@
   </section>
 
   <!-- SEASON PRODUCT -->
-  <section class="season-product">
+  <section class="season-product scroll-spy">
     <div class="inner">
       <img src="./images/floating3.png" alt="Icon" class="floating3">
 
-      <img src="./images/season_product_image.png" alt="" class="product">
+      <img src="./images/season_product_image.png" alt="" class="product back-to-position to-right">
       <div class="text-group">
-        <img src="./images/season_product_text1.png" alt="" class="title">
-        <img src="./images/season_product_text2.png" alt="" class="description">
+        <img src="./images/season_product_text1.png" alt="" class="title back-to-position to-left delaty-1">
+        <img src="./images/season_product_text2.png" alt="" class="description back-to-position to-left delaty-2">
         <div class="more">
-          <a href="#" class="btn">자세히 보기</a>
+          <a href="#" class="btn back-to-position to-left delaty-3">자세히 보기</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- RESERVE COFFEE -->
-  <section class="reserve-coffee">
+  <section class="reserve-coffee scroll-spy">
     <div class="inner">
-      <img src="./images/reserve_logo.png" alt="logo" class="reserve-logo">
+      <img src="./images/reserve_logo.png" alt="logo" class="reserve-logo back-to-position to-right">
       <div class="text-group">
-        <img src="./images/reserve_text.png" alt="description" class="description">
+        <img src="./images/reserve_text.png" alt="description" class="description back-to-position to-right delaty-1">
         <div class="more">
-          <a href="#" class="btn btn--gold">자세히 보기</a>
+          <a href="#" class="btn btn--gold back-to-position to-right delaty-2">자세히 보기</a>
         </div>
       </div>
-      <img src="./images/reserve_image.png" alt="product" class="product">
+      <img src="./images/reserve_image.png" alt="product" class="product back-to-position to-left delaty-3">
     </div>
   </section>
 
   <!-- PICK YOUR FAVORITE -->
-  <section class="pick-your-favorite">
+  <section class="pick-your-favorite scroll-spy">
     <div class="inner">
       <div class="text-group">
-        <img src="./images/favorite_text1.png" alt="description" class="title">
-        <img src="./images/favorite_text2.png" alt="description" class="description">
+        <img src="./images/favorite_text1.png" alt="description" class="title back-to-position to-right">
+        <img src="./images/favorite_text2.png" alt="description" class="description back-to-position to-right delaty-1">
         <div class="more">
-          <a href="#" class="btn btn--white">자세히 보기</a>
+          <a href="#" class="btn btn--white back-to-position to-right delaty-2">자세히 보기</a>
         </div>
       </div>
     </div>
@@ -579,22 +582,30 @@
   <!-- RESERVE STORE -->
   <section class="reserve-store">
     <div class="inner">
-      
+      <div class="medal">
+        <div class="front">
+          <img src="images/reserve_store_medal_front.png" alt="">
+        </div>
+        <div class="back">
+          <img src="images/reserve_store_medal_back.png" alt="">
+          <a href="javascript:void(0)" class="btn">매장안내</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- FINDE STORE -->
-  <section class="finde-store">
+  <section class="finde-store scroll-spy">
     <div class="inner">
-      <img src="./images/find_store_texture1.png" alt="" class="texture1">
+      <img src="./images/find_store_texture1.png" alt="" class="texture1 ">
       <img src="./images/find_store_texture2.png" alt="" class="texture2">
-      <img src="./images/find_store_picture1.jpg" alt="" class="picture1">
-      <img src="./images/find_store_picture2.jpg" alt="" class="picture2">
+      <img src="./images/find_store_picture1.jpg" alt="" class="picture1 back-to-position to-right">
+      <img src="./images/find_store_picture2.jpg" alt="" class="picture2 back-to-position to-right delaty-1">
       <div class="text-group">
-        <img src="./images/find_store_text1.png" alt="description" class="title">
-        <img src="./images/find_store_text2.png" alt="description" class="description">
-        <div class="more">
-          <a href="#" class="btn">자세히 보기</a>
+        <img src="./images/find_store_text1.png" alt="description" class="title back-to-position to-left">
+        <img src="./images/find_store_text2.png" alt="description" class="description back-to-position to-left delaty-1">
+        <div class="more back-to-position to-left delaty-2">
+          <a href="#" class="btn">매장찾기</a>
         </div>
       </div>
     </div>
