@@ -124,3 +124,28 @@ promotionToggleIcon.addEventListener('click', function () {
     promotionToggleIcon.textContent = 'download'
   }
 });
+
+// 유튜브 섹션 위에 부유 요소 애니메이션 처리
+// gsap.to(요소, 지속시간, 옵션: {})
+// 옵션 참고: https://greensock.com/docs/v3/GSAP/gsap.to()
+gsap.to('.floating1', 1.5, {
+  delay: 1, //얼마나 늦게 애니메이션을 시작할 것인지 지연 시간을 설정
+  y: 15, // 수직으로 얼마나 움직일지 설정(translateY(수치); 와 같음)
+  repeat: -1, //몇 번 반복하는 지를 설정, -1은 무한 반복
+  yoyo: true, //한 번 재생된 애니메이션을 다시 뒤로 재생
+  ease: Power1.easeInOut //타이밍 함수 적용
+});
+gsap.to('.floating2', 2, {
+  delay: 0.5, //얼마나 늦게 애니메이션을 시작할 것인지 지연 시간을 설정
+  y: 15, // 수직으로 얼마나 움직일지 설정(translateY(수치); 와 같음)
+  repeat: -1, //몇 번 반복하는 지를 설정, -1은 무한 반복
+  yoyo: true, //한 번 재생된 애니메이션을 다시 뒤로 재생
+  ease: Power1.easeInOut //타이밍 함수 적용
+});
+gsap.to('.floating3', 2.5, {
+  delay: 1.5, //얼마나 늦게 애니메이션을 시작할 것인지 지연 시간을 설정
+  y: 20, // 수직으로 얼마나 움직일지 설정(translateY(수치); 와 같음)
+  repeat: -1, //몇 번 반복하는 지를 설정, -1은 무한 반복
+  yoyo: true, //한 번 재생된 애니메이션을 다시 뒤로 재생
+  ease: Power1.easeInOut //타이밍 함수 적용
+});
