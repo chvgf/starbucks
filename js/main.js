@@ -25,11 +25,19 @@ searchInputEl.addEventListener('blur', function () {
 // 페이지 스크롤에 따른 요소 제어
 const badgeEl = document.querySelector('header .badges');
 
+// 페이지 최상단으로 이동
+const toTopEl = document.querySelector('#to-top');
+toTopEl.addEventListener('click', function () {
+  gsap.to(window, 0.6, {
+    scrollTo: 0 // 페이지의 0px 지잠(최상단)으로 이동, scrollToPlugin을 연결해야 사능 가능한 옵션
+  });
+})
+
 // 페이지에 스크롤 이벤트를 추가!
 // window: 브라우저 창 객체
 window.addEventListener('scroll', function () {
  // (y축으로 얼마나 스크롤 했는 지) 페이지 스크롤 위치
-console.log(window.scrollY);
+// console.log(window.scrollY);
   // Quiz:
   //페이지 스크롤 위치가 500px을 넘으면 배지 요소 숨기고,
   //페이지 스크롤 위치가 500px을 넘지 않으면 배지 요소를 보이기
@@ -42,12 +50,23 @@ console.log(window.scrollY);
       opacity: 0,
       display: 'none'
     });
+
+    // 상단으로 이동 버튼 보이기!
+    gsap.to(toTopEl, 0.6, {
+      opacity: 1,
+      x: 0 // x축으로 0px 지점으로 이동
+    });
   } else {
     // badgeEl.style.display = 'block';
 
     gsap.to(badgeEl, 0.6, {
       opacity: 1,
       display: 'block'
+    });
+    // 상다능로 이동 버튼 숨기기!
+    gsap.to(toTopEl, 0.6, {
+      opacity: 0,
+      x: 100 // x축으로 100px 지점으로 이동
     });
   }
 });
@@ -161,3 +180,20 @@ spyEls.forEach(function (spyEl) {
   .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
   .addTo(new ScrollMagic.Controller()); // 컨트롤러에 장면을 할당(필수!)
 });
+
+// 어워즈 섹션 슬라이드 기능
+new Swiper('.awards .swiper', {
+  loop: true,
+  autoplay: true,
+  slidesPerView: 5,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.awards .swiper-button-next',
+    prevEl: '.awards .swiper-button-prev'
+  }
+});
+
+// 현재 연도 표시
+// 날짜 정보를 가진 JS의 Date 객체를 활용(JS 기본 제공 객체)
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear(); // 현재 연도의 정보가 숫자 데이터로 반환됨
